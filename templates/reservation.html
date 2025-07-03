@@ -1,0 +1,226 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grand Elegance Hotel - Reservation</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a1f44;
+    color: #f5f3f1;
+  }
+  a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #f0e68c;
+  }
+  header {
+    background: #061638;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.7);
+  }
+  header h1 {
+     font-family: 'Playfair Display', serif;;
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin: 0;
+  }
+  nav a {
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  nav a:first-child {
+    margin-left: 0;
+  }
+   #languageSelector {
+  width: 120px; /* or whatever fixed width you prefer */
+  max-width: 100%;
+  /* existing styles below */
+  margin-left: 2rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #d4af37;
+  color: #061638;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+  #languageSelector:hover {
+    background-color: #f0e68c;
+  }
+
+  main {
+    padding: 3rem 2rem 4rem 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #112a62;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  }
+  h2 {
+    color: #d4af37;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  .btn-reserve {
+    align-self: center;
+    background-color: #d4af37;
+    color: #061638;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(212,175,55,0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1.5rem;
+  }
+  .btn-reserve:hover {
+    background-color: #f0e68c;
+    box-shadow: 0 8px 20px rgba(240,230,140,0.7);
+  }
+
+  footer {
+    background: #061638;
+    color: #a3a3a3;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Misgna Bereket Hotel</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="contact.html">Contact</a>
+    <select id="languageSelector">
+      <option value="en">English</option>
+      <option value="am">አማርኛ</option>
+      <option value="ti">ትግርኛ</option>
+      <option value="om">Afaan Oromo</option>
+    </select>
+  </nav>
+</header>
+
+<main>
+  <h2 id="reservationHeader">Make a Reservation</h2>
+  <form onsubmit="handleReservation(event)">
+    <label for="guestName">Full Name:</label>
+    <input type="text" id="guestName" placeholder="Full Name" required>
+
+    <label for="guestEmail">Email Address:</label>
+    <input type="email" id="guestEmail" placeholder="Email Address" required>
+
+    <label for="guestPhone">Phone Number:</label>
+    <input type="tel" id="guestPhone" placeholder="Phone Number" required>
+
+    <label for="guestCount">Number of Guests:</label>
+    <input type="number" id="guestCount" placeholder="Number of Guests" min="1" required>
+
+    <label for="checkIn">Check-In Date:</label>
+    <input type="date" id="checkIn" required>
+
+    <label for="checkOut">Check-Out Date:</label>
+    <input type="date" id="checkOut" required>
+
+    <label for="roomType">Room Type:</label>
+    <select id="roomType" required>
+      <option value="">Select Room Type</option>
+      <option value="deluxe">Deluxe Room</option>
+      <option value="suite">Suite Room</option>
+      <option value="standard">Standard Room</option>
+    </select>
+
+    <label for="specialRequests">Special Requests:</label>
+    <textarea id="specialRequests" rows="4" placeholder="Special Requests (Optional)"></textarea>
+
+    <button type="submit" class="btn-reserve">Reserve Now</button>
+  </form>
+</main>
+
+<section style="background-color: #061638; color: #d4af37; padding: 2rem 1.5rem; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: inset 0 1px 5px rgba(0,0,0,0.7); margin-top: 3rem;">
+  <h3 style="margin-bottom: 1rem; font-weight: 700; font-size: 1.5rem;">Contact Us</h3>
+  <p style="margin: 0.4rem 0;">📧 Email: <a href="mailto:info@grandelegancehotel.com" style="color: #f0e68c;">info@grandelegancehotel.com</a></p>
+  <p style="margin: 0.4rem 0;">📞 Phone: <a href="tel:+123456789" style="color: #f0e68c;">+1 (234) 567-89</a></p>
+  <p style="margin: 0.4rem 0;">🏢 Address: 123 Luxury Blvd, Cityville, Country</p>
+</section>
+
+<footer>
+  &copy; 2025 Grand Elegance Hotel. All rights reserved.
+</footer>
+
+<script>
+  function handleReservation(event) {
+    event.preventDefault();
+    alert('Your reservation has been submitted successfully!');
+    window.location.href = 'index.html';
+  }
+
+  const translations = {
+    en: {header: "Make a Reservation"},
+    am: {header: "ቦታ ያስይዙ"},
+    ti: {header: "ቦታ ይዝዙ"},
+    om: {header: "Teessoo Qabachuu"}
+  };
+
+  document.getElementById('languageSelector').addEventListener('change', (e) => {
+    const lang = e.target.value;
+    const t = translations[lang];
+    if (t) {
+      document.getElementById('reservationHeader').textContent = t.header;
+    }
+  });
+</script>
+
+</body>
+</html>

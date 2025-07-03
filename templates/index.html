@@ -1,0 +1,312 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Misgna Bereket Hotel  - Welcome</title>
+
+<!-- Google Fonts Link for Great Vibes -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+
+<style>
+  /* Reset & base */
+  body, html {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a1f44;
+    color: #f5f3f1;
+  }
+  a {
+    color: #d4af37; /* Gold */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #f0e68c;
+  }
+  header {
+    background: #061638;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.7);
+  }
+  /* Amazing font for hotel name */
+  header h1 {
+    font-family: 'Playfair Display', serif;;
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin: 0;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  nav a {
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  nav a:first-child {
+    margin-left: 0;
+  }
+  #languageSelector {
+    margin-left: 2rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #d4af37;
+    color: #061638;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  #languageSelector:hover {
+    background-color: #f0e68c;
+  }
+
+  /* Hero Section */
+  .hero {
+    height: 90vh;
+    background: linear-gradient(rgba(10, 31, 68, 0.7), rgba(10, 31, 68, 0.7)),
+      url('https://images.unsplash.com/photo-1501117716987-c8a2a2390a18?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .hero h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  }
+  .hero p {
+    font-size: 1.4rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #f0e68c;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  }
+  .btn-primary {
+    background-color: #d4af37;
+    color: #061638;
+    padding: 0.85rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(212,175,55,0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-color: #f0e68c;
+    box-shadow: 0 8px 20px rgba(240,230,140,0.7);
+  }
+
+  /* Services Section */
+  .services {
+    background-color: #061638;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    color: #f5f3f1;
+  }
+  .service-card {
+    background: #112a62;
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+  .service-card:hover {
+    transform: translateY(-8px);
+  }
+  .service-card img {
+    width: 80px;
+    margin-bottom: 1.2rem;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+  }
+  .service-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    color: #d4af37;
+  }
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #eee;
+  }
+
+  /* Footer */
+  footer {
+    background: #061638;
+    color: #a3a3a3;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 90%;
+    }
+    .services {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav {
+      flex-wrap: wrap;
+    }
+    #languageSelector {
+      margin-left: 1rem;
+      margin-top: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Misgna Bereket Hotel</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="contact.html">Contact</a>
+    <select id="languageSelector" aria-label="Select language">
+      <option value="en">English</option>
+      <option value="am">አማርኛ</option>
+      <option value="ti">ትግርኛ</option>
+      <option value="om">Afaan Oromo</option>
+    </select>
+  </nav>
+</header>
+
+<section class="hero" role="banner" aria-label="Hotel promotional banner">
+  <h2>Experience Luxury Like Never Before</h2>
+  <p>Book your stay at Misgna Bereket Hotel — where comfort meets sophistication.</p>
+  <button class="btn-primary" onclick="location.href='reservation.html'">Book Now</button>
+</section>
+
+<section class="services" aria-label="Hotel services highlights">
+  <div class="service-card" tabindex="0">
+    <img src="https://img.icons8.com/ios-filled/100/d4af37/room.png" alt="Spacious Rooms Icon" />
+    <h3>Spacious Rooms</h3>
+    <p>Enjoy elegantly furnished rooms designed for your utmost comfort and relaxation.</p>
+  </div>
+  <div class="service-card" tabindex="0">
+    <img src="https://img.icons8.com/ios-filled/100/d4af37/restaurant.png" alt="Fine Dining Icon" />
+    <h3>Fine Dining</h3>
+    <p>Savor gourmet meals crafted by world-class chefs in an exquisite setting.</p>
+  </div>
+  <div class="service-card" tabindex="0">
+    <img src="https://img.icons8.com/ios-filled/100/d4af37/spa.png" alt="Spa & Wellness Icon" />
+    <h3>Spa & Wellness</h3>
+    <p>Relax and rejuvenate with our full range of spa and wellness treatments.</p>
+  </div>
+  <div class="service-card" tabindex="0">
+    <img src="https://img.icons8.com/ios-filled/100/d4af37/swimming-pool.png" alt="Swimming Pool Icon" />
+    <h3>Swimming Pool</h3>
+    <p>Dive into luxury at our pristine indoor swimming pool open year-round.</p>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Misgna Bereket Hotel. All rights reserved.
+</footer>
+
+<script>
+  const translations = {
+    en: {
+      welcome: "Experience Luxury Like Never Before",
+      description: "Book your stay at Misgna Bereket Hotel — where comfort meets sophistication.",
+      bookNow: "Book Now",
+      services: [
+        {title: "Spacious Rooms", desc: "Enjoy elegantly furnished rooms designed for your utmost comfort and relaxation."},
+        {title: "Fine Dining", desc: "Savor gourmet meals crafted by world-class chefs in an exquisite setting."},
+        {title: "Spa & Wellness", desc: "Relax and rejuvenate with our full range of spa and wellness treatments."},
+        {title: "Swimming Pool", desc: "Dive into luxury at our pristine indoor swimming pool open year-round."}
+      ]
+    },
+    am: {
+      welcome: "እንኳን ደህና መጡ ወደ ምስግና ሆቴል ",
+      description: "በ ምስግና ሆቴል ሆቴል ይቆዩ — እረፍትና ማረፊያ በአንድ ቦታ።",
+      bookNow: "አስይዙ",
+      services: [
+        {title: "ትልቅ ክፍሎች", desc: "በእረፍትና የተሞላ ቆቦ ክፍሎች ይቀመጡ።"},
+        {title: "ጥሩ ምግብ", desc: "በዓለም አቀፍ ምግብ ባለሞያዎች የተሰሩ ምግቦችን ይዘንብሉ።"},
+        {title: "ስፓ እና ደህንነት", desc: "ከሙሉ የስፓ እና ደህንነት አገልግሎቶች ጋር ዕረፍት ይድረሱ።"},
+        {title: "የመዋኛ ማዕከል", desc: "በዓመቱ ሁሉ ክፍት ያለውን እንቁላል ይቀላቀሉ።"}
+      ]
+    },
+    ti: {
+      welcome: "እንቋዕ ብደሓን መጻእኩ ናብ ምስግና ሆቴል !",
+      description: "ኣብ ምስግና ሆቴል ይቆዩ — ኣብ ሰላምን ሓርነትን ዝተሳተፍ።",
+      bookNow: "ምዝገባ",
+      services: [
+        {title: "ሓፋሽ ክፍሎታት", desc: "ብቕዓት ዝተሞላ ክፍሎታት ይቀመጡ።"},
+        {title: "ጽቡቕ መግቢ", desc: "ኣብ ዓለም ደርሆ ኣብ ዘለኹም ገበሬታት ኣብ መንገዲ ምግብ ትቐላል።"},
+        {title: "ስፓ ንጤጥን ሓዊን", desc: "ብሙሉ ስፓ እና ደህንነት ኣገልግሎት እንቕርብ።"},
+        {title: "ማዕከል ማዋኛ", desc: "ብሙሉ ዓመት ክፍት ኣሎ ናይ ምውእታ ማዕከል።"}
+      ]
+    },
+    om: {
+      welcome: "Baga Nagaan Dhuftan Gara Hoteela keenyaatti",
+      description: "Misgnaa Bereketee Hotel keessatti boqonnaa fi bareedina argadhaa.",
+      bookNow: "Har'a Qabsiisi",
+      services: [
+        {title: "Kutaa Bal’aa", desc: "Kutaa bareedaa fi boqonnaa guutuu keessatti boqadhaa."},
+        {title: "Nyaata Gaarii", desc: "Nyaata sadarkaa addunyaatti beekamaa nyaadhaa."},
+        {title: "Spa fi Fayyaa", desc: "Tajaajila spa guutuu fi fayyaa argadhaa."},
+        {title: "Poolii Dhiqannaa", desc: "Poolii dhiqannaa qulqulluu fi bareedaa keessatti ciibaa."}
+      ]
+    }
+  };
+
+  const welcomeEl = document.querySelector('.hero h2');
+  const descEl = document.querySelector('.hero p');
+  const btnEl = document.querySelector('.btn-primary');
+  const serviceCards = document.querySelectorAll('.service-card');
+
+  document.getElementById('languageSelector').addEventListener('change', (e) => {
+    const lang = e.target.value;
+    const t = translations[lang];
+    if (t) {
+      welcomeEl.textContent = t.welcome;
+      descEl.textContent = t.description;
+      btnEl.textContent = t.bookNow;
+      t.services.forEach((service, i) => {
+        if(serviceCards[i]){
+          serviceCards[i].querySelector('h3').textContent = service.title;
+          serviceCards[i].querySelector('p').textContent = service.desc;
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

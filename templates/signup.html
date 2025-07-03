@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grand Elegance Hotel - Sign Up</title>
+<style>
+  body, html {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a1f44;
+    color: #f5f3f1;
+  }
+  a {
+    color: #d4af37;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #f0e68c;
+  }
+  header {
+    background: #061638;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.7);
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;;
+    font-weight: 700;
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    margin: 0;
+  }
+  nav a {
+    margin-left: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  nav a:first-child {
+    margin-left: 0;
+  }
+  #languageSelector {
+    margin-left: 2rem;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    background-color: #d4af37;
+    color: #061638;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  #languageSelector:hover {
+    background-color: #f0e68c;
+  }
+
+  main {
+    padding: 3rem 2rem 4rem 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #112a62;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    text-align: center;
+  }
+  h2 {
+    color: #d4af37;
+    margin-bottom: 2rem;
+  }
+  input {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .btn-signup {
+    background-color: #d4af37;
+    color: #061638;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(212,175,55,0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .btn-signup:hover {
+    background-color: #f0e68c;
+    box-shadow: 0 8px 20px rgba(240,230,140,0.7);
+  }
+  .already-account {
+    margin-top: 1rem;
+    display: block;
+    font-size: 0.9rem;
+  }
+  footer {
+    background: #061638;
+    color: #a3a3a3;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Misgna Bereket Hotel</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="contact.html">Contact</a>
+    <select id="languageSelector">
+      <option value="en">English</option>
+      <option value="am">አማርኛ</option>
+      <option value="ti">ትግርኛ</option>
+      <option value="om">Afaan Oromo</option>
+    </select>
+  </nav>
+</header>
+
+<main>
+  <h2 id="signupHeader">Sign Up</h2>
+  <form onsubmit="handleSignup(event)">
+    <input type="text" id="newUsername" placeholder="Username" required><br>
+    <input type="email" id="newEmail" placeholder="Email" required><br>
+    <input type="password" id="newPassword" placeholder="Password" required><br>
+    <button type="submit" class="btn-signup">Sign Up</button>
+  </form>
+  <a href="login.html" class="already-account">Already have an account? Login</a>
+</main>
+
+<section style="background-color: #061638; color: #d4af37; padding: 2rem 1.5rem; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-shadow: inset 0 1px 5px rgba(0,0,0,0.7); margin-top: 3rem;">
+  <h3 style="margin-bottom: 1rem; font-weight: 700; font-size: 1.5rem;">Contact Us</h3>
+  <p style="margin: 0.4rem 0;">📧 Email: <a href="mailto:info@grandelegancehotel.com" style="color: #f0e68c;">info@grandelegancehotel.com</a></p>
+  <p style="margin: 0.4rem 0;">📞 Phone: <a href="tel:+123456789" style="color: #f0e68c;">+1 (234) 567-89</a></p>
+  <p style="margin: 0.4rem 0;">🏢 Address: 123 Luxury Blvd, Cityville, Country</p>
+</section>
+
+<footer>
+  &copy; 2025 Grand Elegance Hotel. All rights reserved.
+</footer>
+
+<script>
+  function handleSignup(event) {
+    event.preventDefault();
+    alert('Signup successful!');
+    window.location.href = 'login.html';
+  }
+
+  const translations = {
+    en: {header: "Sign Up"},
+    am: {header: "ይመዝገቡ"},
+    ti: {header: "ተመዝገቡ"},
+    om: {header: "Galmaa'i"}
+  };
+
+  document.getElementById('languageSelector').addEventListener('change', (e) => {
+    const lang = e.target.value;
+    const t = translations[lang];
+    if (t) {
+      document.getElementById('signupHeader').textContent = t.header;
+    }
+  });
+</script>
+
+</body>
+</html>
